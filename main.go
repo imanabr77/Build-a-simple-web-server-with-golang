@@ -36,7 +36,7 @@ func hellohandler(w http.ResponseWriter, r *http.Request) {
 func main() {
 	fileserver := http.FileServer(http.Dir("./static"))
 	http.Handle("/", fileserver)
-	http.HandleFunc("/from", fromHandeler)
+	http.HandleFunc("/form", fromHandeler)
 	http.HandleFunc("/hello", hellohandler)
 
 	fmt.Printf("starting server at port 8080\n")
